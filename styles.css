@@ -37,9 +37,10 @@ body {
     position: relative;
     height: 400px;
     overflow: hidden;
+    margin-top: 80px;
   }
   
-  .slide {
+  .slide, .slide1 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -49,7 +50,7 @@ body {
     transition: opacity 1s ease-in-out;
   }
   
-  .slide.current {
+  .slide.current, .slide1.current {
     opacity: 1;
   }
   
@@ -57,17 +58,27 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 15px 25px;
     cursor: pointer;
+    font-size: 18px;
     z-index: 10;
+    transition: background-color 0.3s ease;
   }
   
-  .prev { left: 10px; }
-  .next { right: 10px; }
+  .prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
   
   .overview, .about, .members, .career {
     padding: 2rem;
@@ -106,29 +117,22 @@ body {
   .research-items {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
     margin-top: 2rem;
   }
   
   .research-item {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .research-item.reverse {
     flex-direction: row-reverse;
-  }
-  
-  .research-image {
-    flex: 1;
-  }
-  
-  .research-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .research-text {
@@ -137,13 +141,25 @@ body {
   
   .research-text h3 {
     color: #03431a;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .research-text p {
     line-height: 1.8;
     color: #333;
+  }
+  
+  .research-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .research-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .member-grid {
@@ -168,6 +184,17 @@ body {
     .member-category:nth-child(3) .member-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+    }
+    .research-item {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    .research-item.reverse {
+        flex-direction: column;
+    }
+    .research-image {
+        min-width: 100%;
     }
   }
 
