@@ -1,137 +1,304 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加地研究室 - 九州大学 応用化学部門</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九州大学 応用化学部門 加地研究室</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">
-                <a href="index.html">加地研究室</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">ホーム</a></li>
-                <li><a href="about.html">研究室概要</a></li>
-                <li><a href="research.html">研究内容</a></li>
-                <li><a href="members.html">メンバー</a></li>
-                <li><a href="publications.html">業績</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </div>
+  <header class="site-header">
+    <div class="branding">
+      <h1>加地研究室</h1>
+      <p class="department">九州大学 応用化学部門</p>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#overview">研究室概要</a></li>
+        <li><a href="#research">研究紹介</a></li>
+        <li><a href="#members">メンバー</a></li>
+        <li><a href="#career">進路</a></li>
+        <li><a href="#location">アクセス</a></li>
+        <li class="language-selector">
+          <a href="index.html" class="active">日本語</a> | 
+          <a href="index_en.html">English</a>
+        </li>
+      </ul>
     </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>加地研究室</h1>
-                <p class="hero-description">九州大学 応用化学部門</p>
-                <p>有機合成化学・触媒化学・材料化学の研究</p>
-            </div>
-        </section>
+  <main>
+    <section class="slider">
+      <div class="slide current" style="background-image: url('https://ryota-QU.github.io/img/west3.jpg')"></div>
+      /west3.jpg
+      ')"></div>
+      <div class="slide" style="background-image: url('slide2.jpg')"></div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </section>
 
-        <section class="about">
-            <h2>研究室概要</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>加地研究室は、有機合成化学、触媒化学、材料化学を中心とした研究を行っています。新しい機能性材料の開発や、環境に優しい化学プロセスの確立を目指しています。</p>
-                    <p>当研究室では、以下のような研究テーマに取り組んでいます：</p>
-                    <ul>
-                        <li>新規有機合成手法の開発</li>
-                        <li>環境調和型触媒の設計と合成</li>
-                        <li>機能性高分子材料の開発</li>
-                        <li>有機電子材料の創製</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>20+</h3>
-                        <p>研究メンバー</p>
-                    </div>
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>年間論文数</p>
-                    </div>
-                    <div class="stat">
-                        <h3>15+</h3>
-                        <p>研究プロジェクト</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="overview" class="overview">
+      <h2>研究室概要</h2>
+      <div class="overview-content">
+        <h3 class="overview-title">生命（生命現象）をチップ上で人工的に再現する</h3>
+        <p>加地研究室では、半導体分野における微細加工技術を駆使して作製したマイクロ・ナノ空間を、生体関連物質や細胞の計測・診断の「場」として用いることで、新しいバイオ分析技術を創出すべく研究開発を行っています。最終的にはこのようなLab-on-a-Chip（µTAS）という分析技術をさらに拡張して、生命（生命現象）をチップ上で人工的に再現できるようなLife-on-a-Chipの創成を目指しています。</p>
+        <p>歓迎する人材：</p>
+        <ul>
+          <li>研究に自主的・意欲的に取り組める方</li>
+          <li>パイオニア精神にあふれた方</li>
+          <li>多様性を受容でき、協調性を持つ熱い方</li>
+        </ul>
+        <p>各々が研究室を支えているという当事者意識を大事にしながら有意義な学生生活を送れるよう、スタッフとともに頑張りましょう。</p>
+      </div>
+    </section>
 
-        <section class="research">
-            <h2>研究内容</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <h3>有機合成化学</h3>
-                    <p>新しい有機合成手法の開発と、機能性有機分子の合成を行っています。</p>
-                </div>
-                <div class="research-card">
-                    <h3>触媒化学</h3>
-                    <p>環境に優しい触媒の設計と合成、および触媒反応の開発を進めています。</p>
-                </div>
-                <div class="research-card">
-                    <h3>材料化学</h3>
-                    <p>新しい機能性材料の開発と、その応用研究を行っています。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="members">
-            <h2>研究室メンバー</h2>
-            <div class="members-grid">
-                <div class="member-card">
-                    <div class="member-image">
-                        <img src="images/professor.jpg" alt="加地教授">
-                    </div>
-                    <h3>加地 範匡</h3>
-                    <p class="member-title">教授</p>
-                    <p class="member-info">Ph.D.</p>
-                </div>
-                <div class="member-card">
-                    <div class="member-image">
-                        <img src="images/associate.jpg" alt="財津准教授">
-                    </div>
-                    <h3>財津 慎一</h3>
-                    <p class="member-title">准教授</p>
-                    <p class="member-info">Ph.D.</p>
-                </div>
-                <div class="member-card">
-                    <div class="member-image">
-                        <img src="images/assistant.jpg" alt="梁助教">
-                    </div>
-                    <h3>梁 逸偉</h3>
-                    <p class="member-title">助教</p>
-                    <p class="member-info">Ph.D.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>お問い合わせ</h2>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="お名前" required>
-                    <input type="email" placeholder="メールアドレス" required>
-                    <textarea placeholder="メッセージ" required></textarea>
-                    <button type="submit" class="submit-button">送信</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>加地研究室 - 九州大学 応用化学部門</p>
-            <p>〒819-0395 福岡県福岡市西区元岡744</p>
-            <p>© 2024 Kaji Research Group. All rights reserved.</p>
+    <section id="research" class="about">
+      <h2>研究紹介</h2>
+      <div class="research-items">
+        <div class="research-item reverse">
+          <div class="research-text">
+            <h3>単一細胞・細菌解析法の開発</h3>
+            <p>細胞や細菌が有する情報、例えば遺伝子配列情報などは、比較的簡単かつ低コストで分析できる時代になりました。しかしながら、これらはほとんどが細胞などを破壊する破壊分析法であり、再生医療などにおける細胞の品質保証などに適用することはできません。そこで本研究では、細胞を「触って診断」できるようなマイクロ流体デバイスを開発し、非染色・非破壊な単一細胞解析法を開発し、先進医療に貢献する分析技術の創成に取り組んでいます。</p>
+          </div>
+          <div class="research-image">
+            <img src="research1.jpg" alt="研究内容1">
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="research-item">
+          <div class="research-image">
+            <img src="research2.jpg" alt="研究内容2">
+          </div>
+          <div class="research-text">
+            <h3>人工細胞・細胞外小胞の作製・解析法の開発とバイオ分析・創薬・医療への応用</h3>
+            <p>細胞が放出する直径約50 nmから数mmの細胞外小胞（EV）は、起源となる細胞の核酸やタンパク質を含有し、全身の体液中に豊富に存在するため、特にエクソソームが低侵襲に採取可能な新しい疾患バイオマーカーとして期待を集めています。しかしながら、抽出法や評価法などに確立された方法論がない上、heterogeneityの高い物質であるため、新しい解析法が求められています。そこで本研究では、EVの「粒子」としての性質と「内包物」情報を単一EVレベルで検知できるデバイスを開発し、有用なEVだけを回収して医療応用できるデバイス開発を行っています。 </p>
+          </div>
+        </div>
+
+        <div class="research-item">
+          <div class="research-image">
+            <img src="research3.jpg" alt="研究内容3">
+          </div>
+          <div class="research-text">
+            <h3>腸内細菌叢研究のためのマイクロ流体デバイス</h3>
+            <p>私たちの腸内に棲息する無数の細菌たちの機能を活用することで，私たちは健康な生活を送っています。しかし，この菌の共生環境が形成されるまでの過程についてはよく知られていません。本研究では，微細加工技術を利用して腸内に似た環境を作製し，体内で細菌がいつ，どこで，どのように住み着くのかを観察する手法の開発を目指しています。</p>
+          </div>
+        </div>
+
+        <div class="research-item reverse">
+          <div class="research-text">
+            <h3>レーザー光を用いた最先端分析技術の研究</h3>
+            <p>これまで分析化学の分野では使われていなかった新しいツールと、独自に開発したレーザー光源を組み合わせて、オリジナルの分析技術を研究しています。例えば「分散補償型高フィネス共振器」は、私達が初めて提案した、分析機器の性能を飛躍的に向上する可能性のある仕組みです。このようなアプローチによって、レーザー光を利用した極限の分析技術の開発を目指しています。さらにこれらの手法は、分析技術のみならず、レーザー光を世界最高の速度で変調する(周期的な変化を与える)方法などの、これまでない機能を有するデバイスへの発展も可能です。</p>
+          </div>
+          <div class="research-image">
+            <img src="research4.jpg" alt="研究内容4">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="members" class="members">
+      <h2>メンバー</h2>
+      
+      <div class="member-category">
+        <h3>教員</h3>
+        <div class="member-grid">
+          <div class="member-card">
+            <img src="member1.jpg" alt="教授">
+            <h3>加地 範匡</h3>
+          </div>
+          <div class="member-card">
+            <img src="member2.jpg" alt="准教授">
+            <h3> 財津 慎一</h3>
+          </div>
+          <div class="member-card">
+            <img src="member3.jpg" alt="助教">
+            <h3>梁 逸偉 </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-category">
+        <h3>ポスドク</h3>
+        <div class="member-grid">
+          <div class="member-card">
+            <img src="member4.jpg" alt="ポスドク">
+            <h3>王昌民</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-category">
+        <h3>修士課程</h3>
+        <div class="member-grid">
+          <div class="member-card">
+            <img src="member6.jpg" alt="修士課程">
+            <h3>田中 竣也</h3>
+            <p>M2</p>
+          </div>
+          <div class="member-card">
+            <img src="member7.jpg" alt="修士課程">
+            <h3>堤 悠生</h3>
+            <p>M2</p>
+          </div>
+          <div class="member-card">
+            <img src="member8.jpg" alt="修士課程">
+            <h3>前田 陽樹</h3>
+            <p>M2</p>
+          </div>
+          <div class="member-card">
+            <img src="member12.jpg" alt="修士課程">
+            <h3>義永 晴雲</h3>
+            <p>M2</p>
+          </div>
+          <div class="member-card">
+            <img src="member13.jpg" alt="修士課程">
+            <h3>金子 知輝</h3>
+            <p>M1</p>
+          </div>
+          <div class="member-card">
+            <img src="member14.jpg" alt="修士課程">
+            <h3>渡邉 萌</h3>
+            <p>M1</p>
+          </div>
+          <div class="member-card">
+            <img src="member15.jpg" alt="修士課程">
+            <h3>日髙 凌央</h3>
+            <p>M1</p>
+          </div>
+          <div class="member-card">
+            <img src="member16.jpg" alt="修士課程">
+            <h3>國竹 裕亮</h3>
+            <p>M1</p>
+          </div>
+          <div class="member-card">
+            <img src="member17.jpg" alt="修士課程">
+            <h3>石村 晃司</h3>
+            <p>M1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-category">
+        <h3>学部生</h3>
+        <div class="member-grid">
+          <div class="member-card">
+            <img src="member9.jpg" alt="学部生">
+            <h3>宇田津 良太</h3>
+            <p>B4</p>
+          </div>
+          <div class="member-card">
+            <img src="member10.jpg" alt="学部生">
+            <h3>木須 駿介</h3>
+            <p>B4</p>
+          </div>
+          <div class="member-card">
+            <img src="member11.jpg" alt="学部生">
+            <h3>田邉 陽奈</h3>
+            <p>B4</p>
+          </div>
+          <div class="member-card">
+            <img src="member18.jpg" alt="学部生">
+            <h3>嶋田 脩悟</h3>
+            <p>B4</p>
+          </div>
+          <div class="member-card">
+            <img src="member19.jpg" alt="学部生">
+            <h3>田代 陽斗</h3>
+            <p>B4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="career" class="career">
+      <h2>進路</h2>
+      <div class="career-content">
+        <h3>過去5年間の就職先</h3>
+        <div class="career-category">
+          <h3>2024年度</h3>
+          <ul>
+            <li>株式会社ニトリ</li>
+            <li>AGC株式会社</li>
+            <li>ソニーセミコンダクタマニュファクチャリング株式会社</li>
+            <li>エア・ウォーター株式会社</li>
+            <li>株式会社OCC</li>
+          </ul>
+        </div>
+
+        <div class="career-category">
+          <h3>2023年度</h3>
+          <ul>
+            <li>株式会社トプコン</li>
+            <li>ソニーセミコンダクタマニュファクチャリング株式会社</li>
+            <li>エア・ウォーター株式会社</li>
+            <li>ソニーセミコンダクタマニュファクチャリング株式会社</li>
+            <li>株式会社ヤクルト</li>
+            <li>西日本電信電話株式会社</li>
+          </ul>
+        </div>
+
+        <div class="career-category">
+          <h3>2022年度</h3>
+          <ul>
+            <li>アサヒグループ食品株式会社</li>
+            <li>サントリーホールディングス株式会社</li>
+            <li>森永乳業株式会社</li>
+            <li>アズビル株式会社</li>
+            <li>東レ株式会社</li>
+          </ul>
+        </div>
+
+        <div class="career-category">
+          <h3>2021年度</h3>
+          <ul>
+            <li>アズビル株式会社</li>
+            <li>ソニーセミコンダクタマニュファクチャリング株式会社</li>
+            <li>京セラ株式会社</li>
+            <li>TOTO株式会社</li>
+            <li>株式会社理研鼎業</li>
+          </ul>
+        </div>
+
+        <div class="career-category">
+          <h3>2020年度</h3>
+          <ul>
+            <li>株式会社ダイセル</li>
+            <li>日油株式会社</li>
+            <li>アズビル株式会社</li>
+            <li>株式会社東海理化</li>
+            <li>ソニーLSIデザイン株式会社</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="location" class="location">
+      <h2>アクセス</h2>
+      <div class="location-content">
+        <div class="address-info">
+          <h3>所在地</h3>
+          <p>〒819-0395</p>
+          <p>福岡県福岡市西区元岡744</p>
+          <p>九州大学 伊都キャンパス ３号館 4階</p>
+          <p>応用化学部門 加地研究室</p>
+        </div>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.6969787585165!2d130.21751052806073!3d33.59508133288918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541e9dbc5b27ad9%3A0x16e477d0c759bfb!2z5Lmd5bee5aSn5a2m5LyK6YO944Kt44Oj44Oz44OR44K5IOOCpuOCqOOCueODiDPlj7fppKg!5e0!3m2!1sja!2sjp!4v1745829550634!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 加地研究室</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
