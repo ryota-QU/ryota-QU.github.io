@@ -1,0 +1,384 @@
+body {
+    margin: 0;
+    font-family: 'Shippori Mincho B1', serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+  
+  .site-header {
+    background-color: rgba(3, 67, 26, 0.9); /* Changed to semi-transparent green */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .site-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.current {
+    opacity: 1;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  
+  .overview, .about, .members, .career {
+    padding: 2rem;
+    background: white;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+  }
+  
+  .overview-content {
+    margin-top: 1rem;
+  }
+  
+  .overview-title {
+    font-size: 1.5rem;
+    color: #03431a;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .overview-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overview-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .overview-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .research-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .research-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .research-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .research-image {
+    flex: 1;
+  }
+  
+  .research-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .research-text {
+    flex: 1;
+  }
+  
+  .research-text h3 {
+    color: #03431a;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .research-text p {
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* 教員カテゴリーのグリッドを3列に固定 */
+  .member-category:first-child .member-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* 修士課程のグリッドを3列に固定 */
+  .member-category:nth-child(3) .member-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .member-category:nth-child(3) .member-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .member-category:nth-child(3) .member-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  /* 学部生のグリッドを5列に固定 */
+  .member-category:nth-child(4) .member-grid {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+    grid-template-rows: 1fr;
+  }
+  
+  .member-card {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    order: 1;
+  }
+  
+  .member-card h3 {
+    margin: 0.5rem 0;
+    color: #03431a;
+    order: 2;
+    font-size: 1rem;
+  }
+  
+  .member-card p {
+    margin: 0.3rem 0;
+    color: #666;
+    order: 3;
+    font-size: 0.9rem;
+  }
+  
+  .member-category {
+    margin-bottom: 3rem;
+  }
+  
+  .member-category h3 {
+    color: #03431a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #03431a;
+  }
+  
+  .member-category:last-child {
+    margin-bottom: 0;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #03431a;
+    color: white;
+  }
+  
+  .branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .branding h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .branding .department {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .career-content {
+    margin-top: 1.5rem;
+  }
+  
+  .career-category {
+    margin-bottom: 2rem;
+  }
+  
+  .career-category:last-child {
+    margin-bottom: 0;
+  }
+  
+  .career-category h3 {
+    color: #03431a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #03431a;
+  }
+  
+  .career-category ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .career-category li {
+    margin-bottom: 0.8rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* アクセスセクションのスタイル */
+  .location {
+    padding: 2rem;
+    background: white;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+  }
+  
+  .location-content {
+    margin-top: 1.5rem;
+  }
+  
+  .address-info, .access-info {
+    margin-bottom: 2rem;
+  }
+  
+  .address-info h3, .access-info h3 {
+    color: #03431a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #03431a;
+  }
+  
+  .address-info p {
+    margin: 0.5rem 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .access-info ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .access-info li {
+    margin-bottom: 0.8rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .map-container {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+  }
+  
+  main {
+    margin-top: 80px; /* Add margin to account for fixed header */
+  }
+  
+  .language-selector {
+    margin-left: 20px;
+  }
+
+  .language-selector a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+
+  .language-selector a:hover {
+    color: #333;
+  }
+
+  .language-selector a.active {
+    color: #000;
+    font-weight: bold;
+  }
+  
